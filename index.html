@@ -1,105 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-theme="dark">
+<html lang="zh-TW" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOWAITOGURE</title>
   
-  <!-- 字體引入 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="pattern"></div>
-
   <!-- 頁首 Header -->
   <header class="head wrap">
-    <h1><a href="#"><span class="shine shine--title">HOWAITOGURE</span></a></h1>
-    <p><span class="shine">Minimalist Space & Portfolio</span></p>
+    <h1><a href="#">HOWAITOGURE</a></h1>
+    <p>Minimal skin test blog</p>
 
-    <!-- 功能選單區塊 -->
+    <!-- 選單區塊 -->
     <div class="acts">
-      <button class="moon" id="theme-toggle" type="button" aria-label="切換主題"></button>
+      <span class="square-icon"></span>
       <a class="act" href="#">Category</a>
       <a class="act" href="#">Tag</a>
       <a class="act" href="#">Notice</a>
+      <a class="act" href="#">Write</a>
+      <a class="act" href="#">Manage</a>
       
-      <!-- 搜尋框 -->
       <div class="search">
         <input class="search-i" type="search" placeholder="Search">
       </div>
     </div>
   </header>
 
-  <!-- 置頂公告區 (Optional) -->
-  <section class="posts wrap" id="notices">
-    <article class="post post--notice">
-      <a class="thumb" href="#">
-        <div class="blank" aria-hidden="true"></div>
-        <span class="a11y">公告事項</span>
-        <div class="over" aria-hidden="true"></div>
-      </a>
-      <div class="meta">
-        <span class="tag">NOTICE</span>
-        <span class="meta-t">歡迎來到我的極簡個人空間</span>
-      </div>
-    </article>
-  </section>
+  <!-- IG 網格卡片區 (3列 1:1 正方形) -->
+  <main class="posts wrap">
 
-  <!-- 主要內容卡片區 (3列網格 + 動態光暈效果) -->
-  <main class="posts wrap" id="posts">
-
-    <!-- 卡片 1 (帶有無圖片時的動態極光 Aurora 背景) -->
     <article class="post">
       <a class="thumb" href="#">
-        <div class="blank" aria-hidden="true"></div>
-        <div class="over" aria-hidden="true"></div>
+        <img src="https://picsum.photos/500/500?random=1" alt="Post 1">
       </a>
       <div class="meta">
-        <span class="tag">DESIGN</span>
-        <span class="meta-t">Dark Minimalist System</span>
+        <span class="meta-t">유튜브 업로드 테스트</span>
       </div>
     </article>
 
-    <!-- 卡片 2 (帶圖片) -->
     <article class="post">
       <a class="thumb" href="#">
-        <div class="blank" aria-hidden="true"></div>
-        <img src="https://picsum.photos/600/600?random=1" alt="作品封面" loading="lazy">
-        <div class="over" aria-hidden="true"></div>
+        <img src="https://picsum.photos/500/500?random=2" alt="Post 2">
       </a>
       <div class="meta">
-        <span class="tag">DEV</span>
-        <span class="meta-t">GitHub Pages Deployment</span>
+        <span class="meta-t">태그 테스트</span>
       </div>
     </article>
 
-    <!-- 卡片 3 (無圖片極光背景) -->
     <article class="post">
       <a class="thumb" href="#">
-        <div class="blank" aria-hidden="true"></div>
-        <div class="over" aria-hidden="true"></div>
+        <img src="https://picsum.photos/500/500?random=3" alt="Post 3">
       </a>
       <div class="meta">
-        <span class="tag">LOG</span>
-        <span class="meta-t">Typography and Spatial Design</span>
+        <span class="meta-t">post test</span>
       </div>
     </article>
 
-    <!-- 卡片 4 (帶圖片) -->
     <article class="post">
       <a class="thumb" href="#">
-        <div class="blank" aria-hidden="true"></div>
-        <img src="https://picsum.photos/600/600?random=2" alt="作品封面" loading="lazy">
-        <div class="over" aria-hidden="true"></div>
+        <img src="https://picsum.photos/500/500?random=4" alt="Post 4">
       </a>
       <div class="meta">
-        <span class="tag">PHOTO</span>
-        <span class="meta-t">Urban Geometry Photography</span>
+        <span class="meta-t">Minimal Layout</span>
+      </div>
+    </article>
+
+    <article class="post">
+      <a class="thumb" href="#">
+        <img src="https://picsum.photos/500/500?random=5" alt="Post 5">
+      </a>
+      <div class="meta">
+        <span class="meta-t">Butterfly Lab</span>
+      </div>
+    </article>
+
+    <article class="post">
+      <a class="thumb" href="#">
+        <img src="https://picsum.photos/500/500?random=6" alt="Post 6">
+      </a>
+      <div class="meta">
+        <span class="meta-t">Pixel Art</span>
       </div>
     </article>
 
@@ -107,22 +93,8 @@
 
   <!-- 頁尾 Footer -->
   <footer class="foot wrap">
-    <p class="copy">
-      <span class="copy-b" aria-hidden="true"></span>
-      <span class="copy-t">© HOWAITOGURE</span>
-    </p>
+    <p class="copy">© HOWAITOGURE</p>
   </footer>
 
-  <!-- 亮暗色主題切換 JS 腳本 -->
-  <script>
-    const root = document.documentElement;
-    const toggle = document.getElementById('theme-toggle');
-
-    toggle.addEventListener('click', () => {
-      const currentTheme = root.getAttribute('data-theme');
-      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', nextTheme);
-    });
-  </script>
 </body>
 </html>
