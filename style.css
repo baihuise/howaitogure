@@ -1,10 +1,12 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
 :root {
-  --bg: #FAFAFA;
-  --fg: #27272A;
-  --fg-subtle: #71717A;
-  --line: #E4E4E7;
-  --font-sans: 'IBM Plex Sans KR', -apple-system, sans-serif;
-  --page-w: 620px;
+  --bg: #F5F5F5;            /* 與圖片完全一致的淺灰底色 */
+  --card-bg: #FFFFFF;
+  --fg: #3F3F46;             /* 深灰精緻字體 */
+  --fg-muted: #8E8E93;       /* 次要灰色文字 */
+  --line: #E2E2E2;           /* 圖片淡邊框顏色 */
+  --page-w: 620px;           /* 圖片中央固定寬度 */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,9 +14,9 @@
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  line-height: 1.5;
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,71 +28,80 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
 }
 
-/* 頁首 Header */
+/* 頁首 Header 區塊 */
 .head {
-  padding: 100px 0 40px;
+  padding: 120px 0 36px;
 }
 
 .head h1 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--fg);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
 }
 
 .head p {
-  font-size: 0.875rem;
-  color: var(--fg-subtle);
-  margin-bottom: 28px;
+  font-size: 13px;
+  color: var(--fg-muted);
+  font-weight: 400;
+  margin-bottom: 32px;
 }
 
-/* 選單工具列 */
+/* 選單與標題區塊 */
 .acts {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 0.8125rem;
-  color: var(--fg-subtle);
+  gap: 12px;
+  font-size: 12px;
+  color: var(--fg-muted);
 }
 
 .square-icon {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--fg-subtle);
+  width: 7px;
+  height: 7px;
+  background-color: var(--fg);
   margin-right: 2px;
 }
 
 .act {
-  transition: color 0.2s ease;
+  color: var(--fg-muted);
+  transition: color 0.15s ease;
 }
 
 .act:hover {
   color: var(--fg);
 }
 
+/* 搜尋框底線風格 */
+.search {
+  margin-left: 4px;
+}
+
 .search-i {
   border: 0;
   border-bottom: 1px solid var(--line);
-  background: none;
+  background: transparent;
   font-family: inherit;
-  font-size: 0.8125rem;
+  font-size: 12px;
   color: var(--fg);
   padding: 2px 0;
-  width: 100px;
+  width: 90px;
   outline: none;
 }
 
 .search-i::placeholder {
-  color: var(--fg-subtle);
+  color: var(--fg-muted);
 }
 
-/* 3 列 1:1 IG 風格卡片網格 */
+/* 正方形 1:1 照片網格 (與圖片完全一致的 3 列排版) */
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px 20px;
-  padding-bottom: 100px;
+  gap: 24px 20px;
+  padding-top: 40px;
+  padding-bottom: 120px;
 }
 
 .post {
@@ -104,7 +115,7 @@ a { color: inherit; text-decoration: none; }
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #FFF;
+  background: var(--card-bg);
 }
 
 .post .thumb img {
@@ -114,11 +125,12 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
+/* 卡片下方標題 (右對齊小字) */
 .post .meta {
   margin-top: 8px;
-  text-align: right; /* 右對齊，與範圖一致 */
-  font-size: 0.75rem;
-  color: var(--fg-subtle);
+  text-align: right;
+  font-size: 11px;
+  color: var(--fg-muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -131,21 +143,17 @@ a { color: inherit; text-decoration: none; }
 /* 頁尾 */
 .foot {
   padding-bottom: 60px;
-  font-size: 0.75rem;
-  color: var(--fg-subtle);
+  font-size: 11px;
+  color: var(--fg-muted);
   text-align: right;
 }
 
-/* RWD 手機版自動調整 */
 @media (max-width: 550px) {
   .posts {
-    grid-template-columns: repeat(2, 1fr); /* 手機上顯示 2 列 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
   .head {
-    padding: 50px 0 30px;
-  }
-  .acts {
-    flex-wrap: wrap;
+    padding: 60px 0 24px;
   }
 }
