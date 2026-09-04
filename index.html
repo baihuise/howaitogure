@@ -1,103 +1,128 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的極簡個人網站</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- 引入乾淨的 Google 繁體中文標準字體 -->
+  <title>HOWAITOGURE</title>
+  
+  <!-- 字體引入 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="pattern"></div>
+
   <!-- 頁首 Header -->
-  <header class="header">
-    <div class="container">
-      <h1 class="blog-title">MY PORTFOLIO</h1>
-      <p class="blog-desc">記錄生活、設計與程式碼的極簡空間</p>
+  <header class="head wrap">
+    <h1><a href="#"><span class="shine shine--title">HOWAITOGURE</span></a></h1>
+    <p><span class="shine">Minimalist Space & Portfolio</span></p>
+
+    <!-- 功能選單區塊 -->
+    <div class="acts">
+      <button class="moon" id="theme-toggle" type="button" aria-label="切換主題"></button>
+      <a class="act" href="#">Category</a>
+      <a class="act" href="#">Tag</a>
+      <a class="act" href="#">Notice</a>
       
-      <!-- 社群連結 -->
-      <div class="social-links">
-        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a>
+      <!-- 搜尋框 -->
+      <div class="search">
+        <input class="search-i" type="search" placeholder="Search">
       </div>
     </div>
   </header>
 
-  <!-- 置頂公告區塊 -->
-  <section class="notice-section">
-    <div class="container">
-      <div class="notice-box">
-        <span class="notice-badge">Notice</span>
-        <p class="notice-text">歡迎來到我的網站！目前專案開放合作接案中。</p>
+  <!-- 置頂公告區 (Optional) -->
+  <section class="posts wrap" id="notices">
+    <article class="post post--notice">
+      <a class="thumb" href="#">
+        <div class="blank" aria-hidden="true"></div>
+        <span class="a11y">公告事項</span>
+        <div class="over" aria-hidden="true"></div>
+      </a>
+      <div class="meta">
+        <span class="tag">NOTICE</span>
+        <span class="meta-t">歡迎來到我的極簡個人空間</span>
       </div>
-    </div>
+    </article>
   </section>
 
-  <!-- 主要內容區：卡片列表 (Card Grid) -->
-  <main class="main-content">
-    <div class="container">
-      <div class="card-grid">
+  <!-- 主要內容卡片區 (3列網格 + 動態光暈效果) -->
+  <main class="posts wrap" id="posts">
 
-        <!-- 卡片 1 -->
-        <article class="card">
-          <div class="card-image-wrap">
-            <span class="badge-new">NEW</span>
-            <img src="https://picsum.photos/600/400?random=1" alt="專案圖片" class="card-img">
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">極簡網站設計系統</h2>
-            <p class="card-summary">探索如何使用少即是多的原則，打造清晰、流暢且具質感的網頁使用者體驗。</p>
-            <div class="card-footer">
-              <span class="card-date">2026-09-04</span>
-              <span class="card-price">Design</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 卡片 2 -->
-        <article class="card">
-          <div class="card-image-wrap">
-            <span class="badge-new">NEW</span>
-            <img src="https://picsum.photos/600/400?random=2" alt="專案圖片" class="card-img">
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">前端開發實戰筆記</h2>
-            <p class="card-summary">記錄從 HTML/CSS 到現代前端框架的學習歷程與優化技巧。</p>
-            <div class="card-footer">
-              <span class="card-date">2026-08-28</span>
-              <span class="card-price">Dev</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 卡片 3 -->
-        <article class="card">
-          <div class="card-image-wrap">
-            <img src="https://picsum.photos/600/400?random=3" alt="專案圖片" class="card-img">
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">攝影與生活留白</h2>
-            <p class="card-summary">用鏡頭捕捉城市的日常角落，尋找生活中的秩序與寧靜。</p>
-            <div class="card-footer">
-              <span class="card-date">2026-08-15</span>
-              <span class="card-price">Photo</span>
-            </div>
-          </div>
-        </article>
-
+    <!-- 卡片 1 (帶有無圖片時的動態極光 Aurora 背景) -->
+    <article class="post">
+      <a class="thumb" href="#">
+        <div class="blank" aria-hidden="true"></div>
+        <div class="over" aria-hidden="true"></div>
+      </a>
+      <div class="meta">
+        <span class="tag">DESIGN</span>
+        <span class="meta-t">Dark Minimalist System</span>
       </div>
-    </div>
+    </article>
+
+    <!-- 卡片 2 (帶圖片) -->
+    <article class="post">
+      <a class="thumb" href="#">
+        <div class="blank" aria-hidden="true"></div>
+        <img src="https://picsum.photos/600/600?random=1" alt="作品封面" loading="lazy">
+        <div class="over" aria-hidden="true"></div>
+      </a>
+      <div class="meta">
+        <span class="tag">DEV</span>
+        <span class="meta-t">GitHub Pages Deployment</span>
+      </div>
+    </article>
+
+    <!-- 卡片 3 (無圖片極光背景) -->
+    <article class="post">
+      <a class="thumb" href="#">
+        <div class="blank" aria-hidden="true"></div>
+        <div class="over" aria-hidden="true"></div>
+      </a>
+      <div class="meta">
+        <span class="tag">LOG</span>
+        <span class="meta-t">Typography and Spatial Design</span>
+      </div>
+    </article>
+
+    <!-- 卡片 4 (帶圖片) -->
+    <article class="post">
+      <a class="thumb" href="#">
+        <div class="blank" aria-hidden="true"></div>
+        <img src="https://picsum.photos/600/600?random=2" alt="作品封面" loading="lazy">
+        <div class="over" aria-hidden="true"></div>
+      </a>
+      <div class="meta">
+        <span class="tag">PHOTO</span>
+        <span class="meta-t">Urban Geometry Photography</span>
+      </div>
+    </article>
+
   </main>
 
   <!-- 頁尾 Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Minimal Skin style. Powered by GitHub Pages.</p>
-    </div>
+  <footer class="foot wrap">
+    <p class="copy">
+      <span class="copy-b" aria-hidden="true"></span>
+      <span class="copy-t">© HOWAITOGURE</span>
+    </p>
   </footer>
 
+  <!-- 亮暗色主題切換 JS 腳本 -->
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+
+    toggle.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', nextTheme);
+    });
+  </script>
 </body>
 </html>
