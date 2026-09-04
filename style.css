@@ -1,0 +1,195 @@
+/* ===== 1. 全局屬性與極簡溫暖配色 (Beige Theme) ===== */
+:root {
+  --bg-color: #F7F5F0;       /* 溫暖米白背景 */
+  --card-bg: #FFFFFF;        /* 純白卡片背景 */
+  --text-main: #2C2825;      /* 深灰黑字體 */
+  --text-muted: #7A7571;     /* 次要灰字 */
+  --border-color: #E6E2DA;   /* 柔和邊框 */
+  --accent-color: #2C2825;   /* 強調色 */
+  --card-radius: 20px;       /* 卡片圓角 */
+  --img-radius: 14px;        /* 圖片圓角 */
+  --font-family: 'Noto Sans TC', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== 2. 頁首 Header ===== */
+.header {
+  padding: 80px 0 40px 0;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.blog-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0 10px;
+  border-bottom: 1px solid var(--text-main);
+  transition: opacity 0.2s;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
+
+/* ===== 3. 公告區塊 ===== */
+.notice-section {
+  margin-bottom: 50px;
+}
+
+.notice-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px 24px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notice-badge {
+  background-color: var(--accent-color);
+  color: #FFF;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.notice-text {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+/* ===== 4. 3列卡片網格 (Card Grid) ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 預設 3 列 */
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 18px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--img-radius);
+  margin-bottom: 16px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--accent-color);
+  color: #FFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.card-price {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* ===== 5. 頁尾 Footer ===== */
+.footer {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===== 6. 手機版響應式設計 (Responsive) ===== */
+@media (max-width: 850px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 平板改 2 列 */
+  }
+}
+
+@media (max-width: 550px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 手機改 1 列 */
+  }
+  .header {
+    padding: 50px 0 30px 0;
+  }
+}
